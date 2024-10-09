@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
+import type { Metadata } from "next";
 
 import "./globals.css";
-import { Nav } from "@/components/Nav";
+// import { Nav } from "@/components/Nav";
+import { LeftSidNav } from "@/components/LeftSideNav";
 import { cn } from "@/utils";
 
 export const metadata: Metadata = {
@@ -25,7 +26,8 @@ export default function RootLayout({
           "flex flex-col min-h-screen"
         )}
       >
-        <Nav />
+        <LeftSidNav />
+        {/* <Nav /> */}
         {children}
       </body>
     </html>
