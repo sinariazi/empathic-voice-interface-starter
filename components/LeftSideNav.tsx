@@ -17,7 +17,7 @@ export function LeftSidNav() {
   const toggleMenu = () => setIsMenuExpanded(!isMenuExpanded);
   const toggleLogin = () => setIsLoggedIn(!isLoggedIn);
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex  bg-gray-100">
       <nav
         className={`fixed left-0 top-0 z-40 h-full bg-white transition-all duration-300 ease-in-out ${
           isMenuExpanded ? "w-64" : "w-16"
