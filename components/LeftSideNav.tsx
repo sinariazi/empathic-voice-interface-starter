@@ -105,6 +105,23 @@ export function LeftSidNav() {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/callFunction"
+                  className="flex items-center text-gray-700 hover:text-blue-600"
+                  onClick={toggleMenu}
+                  aria-label="Start a Therapy Session"
+                >
+                  <MessageCircle size={20} />
+                  <span
+                    className={`ml-2 ${
+                      isMenuExpanded ? "inline-block" : "hidden"
+                    }`}
+                  >
+                    New Call function
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
 
