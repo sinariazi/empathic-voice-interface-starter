@@ -8,8 +8,8 @@ import { cn } from "@/utils";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hume AI - EVI - Next.js Starter",
-  description: "A Next.js starter using Hume AI's Empathic Voice Interface",
+  title: "Mood Whisper",
+  description: "Listening to what matters.",
 };
 
 export default function RootLayout({
