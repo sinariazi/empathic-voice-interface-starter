@@ -39,7 +39,7 @@ export function LeftSidNav() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/landingPage"
+                  href="/"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
                   aria-label="Home"
