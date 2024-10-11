@@ -2,10 +2,10 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 
-import "./globals.css";
-// import { Nav } from "@/components/Nav";
 import { LeftSidNav } from "@/components/LeftSideNav";
+import { Nav } from "@/components/Nav";
 import { cn } from "@/utils";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Hume AI - EVI - Next.js Starter",
@@ -27,7 +27,7 @@ export default function RootLayout({
         )}
       >
         <LeftSidNav />
-        {/* <Nav /> */}
+        <Nav />
         {children}
       </body>
     </html>
