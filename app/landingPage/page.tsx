@@ -1,6 +1,7 @@
 import { NewsletterSubscribeComponent } from "@/components/newsletter-subscribe";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import WaitingList from "@/components/waitingList/WaitingList";
 import { Brain, MessageCircle, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -226,6 +227,9 @@ export default function Component() {
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
           <NewsletterSubscribeComponent />
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
+          <WaitingList />{" "}
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">

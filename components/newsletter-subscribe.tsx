@@ -17,13 +17,28 @@ export function NewsletterSubscribeComponent() {
     e.preventDefault();
     setStatus("loading");
 
-    // Here you would typically send the email to your API
-    // This is a mock API call
+    // Mailchimp form action URL (from the Mailchimp embed form)
+    const url =
+      "https://gmail.us22.list-manage.com/subscribe/post?u=3d5f4e43e5bf5811dd3f13e28&id=2b82c179f2&f_id=0039d1e1f0";
+
+    // Mailchimp requires form data to be submitted as FormData
+    const formData = new FormData();
+    formData.append("EMAIL", email); // Append the email to the form
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setStatus("success");
-      setMessage("Thank you for subscribing!");
-      setEmail("");
+      const response = await fetch(url, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors", // Mailchimp allows no-cors requests
+      });
+
+      if (response.ok || response.type === "opaque") {
+        setStatus("success");
+        setMessage("Thank you for subscribing!");
+        setEmail("");
+      } else {
+        throw new Error("Subscription failed");
+      }
     } catch (error) {
       setStatus("error");
       setMessage("An error occurred. Please try again.");
