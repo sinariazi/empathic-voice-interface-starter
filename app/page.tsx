@@ -1,5 +1,9 @@
 import { LandingPage } from "@/components/landing-page";
 
 export default async function Page() {
-  return <LandingPage />;
+  return (
+    <div className="ml-10 mb-10">
+      <LandingPage />
+    </div>
+  );
 }

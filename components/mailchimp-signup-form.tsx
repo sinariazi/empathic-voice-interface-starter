@@ -31,7 +31,7 @@ type FormData = {
   };
 };
 
-export default function Component() {
+export default function EarlyUserSignUp() {
   const [formData, setFormData] = useState<FormData>({
     EMAIL: "",
     FNAME: "",
