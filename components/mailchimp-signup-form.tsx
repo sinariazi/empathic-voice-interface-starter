@@ -135,7 +135,10 @@ export default function EarlyUserSignUp() {
           </p>
           <p className="text-blue-800 ">
             {" "}
-            <Link href="https://www.instagram.com/moodwhisper_ai">
+            <Link
+              target="_blank"
+              href="https://www.instagram.com/moodwhisper_ai"
+            >
               {" "}
               Follow us on Instagram{" "}
             </Link>
