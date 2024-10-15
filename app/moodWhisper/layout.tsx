@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { LeftSidNav } from "@/components/LeftSideNav";
 import { Nav } from "@/components/Nav";
 import { cn } from "@/utils";
-import "./globals.css";
+import "../moodWhisper/globals.css";
 
 export const metadata: Metadata = {
   title: "Mood Whisper",

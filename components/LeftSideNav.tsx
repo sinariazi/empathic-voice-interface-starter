@@ -39,7 +39,7 @@ export function LeftSidNav() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/"
+                  href="/moodWhisper/"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   aria-label="Home"
                 >
@@ -55,7 +55,7 @@ export function LeftSidNav() {
               </li>
               <li>
                 <Link
-                  href="/personalDashboard/moodTracker"
+                  href="/moodWhisper/personalDashboard/moodTracker"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
                   aria-label="Mood Tracker"
@@ -72,7 +72,7 @@ export function LeftSidNav() {
               </li>
               <li>
                 <Link
-                  href="/personalDashboard"
+                  href="/moodWhisper/personalDashboard"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
                   aria-label="Mood Dashboard"
@@ -89,7 +89,7 @@ export function LeftSidNav() {
               </li>
               <li>
                 <Link
-                  href="/talkingSession"
+                  href="/moodWhisper/talkingSession"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
                   aria-label=" Therapy Session"
@@ -106,7 +106,7 @@ export function LeftSidNav() {
               </li>
               <li>
                 <Link
-                  href="/callFunction"
+                  href="/moodWhisper/callFunction"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
                   aria-label="Start a Therapy Session"
