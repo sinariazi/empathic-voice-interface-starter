@@ -34,7 +34,7 @@ export const Nav = () => {
     >
       <div>
         {" "}
-        <Link href="/landingPage">
+        <Link href="/moodWhisper/landingPage">
           <MWLogo className={"h-5 w-auto"} />
         </Link>
       </div>

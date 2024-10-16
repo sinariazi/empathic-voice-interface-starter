@@ -24,24 +24,26 @@ export default function Component() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-                    Get Started
-                  </Button>
-                  <Button
+                  <Link href={"/earlyUsersSignUp"}>
+                    <Button className="bg-blue-500 hover:bg-blue-600 text-white">
+                      Get Started
+                    </Button>
+                  </Link>
+                  {/*  <Button
                     variant="outline"
                     className="text-blue-500 border-blue-500 hover:bg-blue-50"
                   >
                     Learn More
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
               <div className="flex items-center justify-center">
                 <Image
                   alt="Mood Whisper App"
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center"
-                  height="300"
-                  src="/mw.svg"
-                  width="300"
+                  height="400"
+                  src="/file.png"
+                  width="500"
                 />
               </div>
             </div>
