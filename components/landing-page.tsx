@@ -16,7 +16,7 @@ export function LandingPage() {
         {/* First Image and Text Box */}
         <div className="mb-12 flex flex-col items-center space-y-2 md:flex-row md:space-x-8 md:space-y-0">
           <Image
-            src="/placeholder.svg"
+            src="/graph.png"
             alt="Mental Health Illustration"
             width={400}
             height={300}
@@ -40,16 +40,16 @@ export function LandingPage() {
               Professional Support
             </h2>
             <p className="text-gray-600">
-              Connect with licensed therapists for personalized support. Our
-              platform offers secure, confidential sessions to help you navigate
-              life's challenges and work towards your mental health goals.
+              We provide 24/7 personalized support. Our platform offers secure,
+              confidential sessions to help you navigate life's challenges and
+              work towards your mental health goals.
             </p>
           </div>
           <Image
-            src="/placeholder.svg"
+            src="/supportCrew.jpeg"
             alt="Therapy Session Illustration"
-            width={400}
-            height={300}
+            width={300}
+            height={200}
             className="rounded-lg object-cover"
           />
         </div>

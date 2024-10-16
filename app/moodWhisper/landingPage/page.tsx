@@ -1,7 +1,6 @@
 import { NewsletterSubscribeComponent } from "@/components/newsletter-subscribe";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import WaitingList from "@/components/waitingList/WaitingList";
 import { Brain, MessageCircle, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,40 +8,6 @@ import Link from "next/link";
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
-          <Image
-            // className="h-6 w-6 text-blue-500"
-            src={"/mw.svg"}
-            alt={"moodwhisper logo"}
-            height={40}
-            width={40}
-          />
-          <span className="ml-2 text-2xl font-bold text-blue-600">
-            Mood Whisper
-          </span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#features"
-          >
-            Features
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#how-it-works"
-          >
-            How It Works
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#testimonials"
-          >
-            Testimonials
-          </Link>
-        </nav>
-      </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-blue-50 via-blue-100 to-white">
           <div className="container px-4 md:px-6">
@@ -59,24 +24,26 @@ export default function Component() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-                    Get Started
-                  </Button>
-                  <Button
+                  <Link href={"/earlyUsersSignUp"}>
+                    <Button className="bg-blue-500 hover:bg-blue-600 text-white">
+                      Get Started
+                    </Button>
+                  </Link>
+                  {/*  <Button
                     variant="outline"
                     className="text-blue-500 border-blue-500 hover:bg-blue-50"
                   >
                     Learn More
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
               <div className="flex items-center justify-center">
                 <Image
                   alt="Mood Whisper App"
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center"
-                  height="300"
-                  src="/mw.svg"
-                  width="300"
+                  height="400"
+                  src="/file.png"
+                  width="500"
                 />
               </div>
             </div>
@@ -214,22 +181,24 @@ export default function Component() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-500">
           <div className="container px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white mb-6">
-              Start Your Mental Health Journey Today
+              Join Our Early Users Waiting List!
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join thousands of users who have transformed their lives with Mood
-              Whisper.
+              Be among the first to access our app and help shape its future.
+              Your feedback is invaluable in tailoring the experience to meet
+              your personal preferences. Sign up today and be part of our
+              journey!{" "}
             </p>
-            <Button className="bg-white text-blue-600 hover:bg-blue-50">
-              Sign Up Now
-            </Button>
+            <Link href={"/earlyUsersSignUp"}>
+              {" "}
+              <Button className="bg-white text-blue-600 hover:bg-blue-50">
+                Sign Up Now
+              </Button>
+            </Link>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
           <NewsletterSubscribeComponent />
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
-          <WaitingList />{" "}
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">

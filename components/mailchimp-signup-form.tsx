@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { CheckCircle2, XCircle } from "lucide-react";
+import Link from "next/link";
 
 type FormData = {
   EMAIL: string;
@@ -31,7 +32,7 @@ type FormData = {
   };
 };
 
-export default function Component() {
+export default function EarlyUserSignUp() {
   const [formData, setFormData] = useState<FormData>({
     EMAIL: "",
     FNAME: "",
@@ -118,15 +119,29 @@ export default function Component() {
       <div className="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full">
         <div className="text-center mb-8">
           <img
-            src="/placeholder.svg?height=60&width=200"
-            alt="Logo"
-            className="mx-auto mb-4"
+            src="/file.png"
+            alt="Mood Whisper"
+            className="mx-auto mb-4 "
+            height={50}
+            width={90}
           />
           <h2 className="text-3xl font-semibold text-blue-800">
-            Join Our Waiting List
+            Get Early Access
           </h2>
-          <p className="text-blue-600">
-            Be the first to experience luxury and calm
+          <p className="text-gray-400">
+            Join the Mood Whisper waiting list. We will update you with the
+            latest news and you will get a free access to the app for the first
+            month. Also please
+          </p>
+          <p className="text-blue-800 ">
+            {" "}
+            <Link
+              target="_blank"
+              href="https://www.instagram.com/moodwhisper_ai"
+            >
+              {" "}
+              Follow us on Instagram{" "}
+            </Link>
           </p>
         </div>
         <form

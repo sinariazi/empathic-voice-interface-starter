@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { LeftSidNav } from "@/components/LeftSideNav";
 import { Nav } from "@/components/Nav";
 import { cn } from "@/utils";
-import "./globals.css";
+import "../moodWhisper/globals.css";
 
 export const metadata: Metadata = {
   title: "Mood Whisper",
@@ -28,7 +28,7 @@ export default function RootLayout({
       >
         <LeftSidNav />
         <Nav />
-        {children}
+        <div className="mt-12 ml-16"> {children}</div>
       </body>
     </html>
   );

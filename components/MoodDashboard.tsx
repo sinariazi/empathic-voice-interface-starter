@@ -76,19 +76,6 @@ const motivationalMessages = [
   "Small steps every day lead to big changes over time.",
 ];
 
-const emotionColors = {
-  Happiness: "#FFD700",
-  Excitement: "#FF6347",
-  Contentment: "#98FB98",
-  Gratitude: "#DDA0DD",
-  Love: "#FF69B4",
-  Anxiety: "#4682B4",
-  Stress: "#8B4513",
-  Sadness: "#4169E1",
-  Anger: "#DC143C",
-  Fear: "#800080",
-};
-
 export function MoodDashboard() {
   const [motivationalMessage, setMotivationalMessage] = useState("");
 
@@ -102,26 +89,29 @@ export function MoodDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 sm:p-6 md:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 px-2 py-4 sm:p-6 md:p-8 w-full overflow-x-hidden">
       <header className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8 space-y-4 sm:space-y-0">
         <Link href="/">
           <div className="flex items-center space-x-2">
             <img
               src="/placeholder.svg?height=40&width=40"
               alt="Mood Whisper Logo"
-              className="h-10 w-10"
+              className="h-8 w-8 sm:h-10 sm:w-10"
             />
-            <span className="text-2xl font-bold text-indigo-800">
+            <span className="text-xl sm:text-2xl font-bold text-indigo-800">
               Mood Whisper
             </span>
           </div>
         </Link>
-        <Link href="/personalDashboard/moodTracker">
+        <Link
+          href="/personalDashboard/moodTracker"
+          className="w-full sm:w-auto"
+        >
           <Button
             onClick={() => console.log("Enter your current mood here")}
-            className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white"
+            className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-base"
           >
-            how do you feel today
+            How do you feel today?
           </Button>
         </Link>
       </header>
@@ -129,24 +119,24 @@ export function MoodDashboard() {
       <main className="space-y-6 sm:space-y-8">
         <Card className="bg-white shadow-lg border border-indigo-100">
           <CardHeader>
-            <CardTitle className="text-indigo-800">
+            <CardTitle className="text-indigo-800 text-lg sm:text-xl">
               Your Mood Dashboard
             </CardTitle>
-            <CardDescription className="text-indigo-600">
+            <CardDescription className="text-indigo-600 text-sm sm:text-base">
               {motivationalMessage}
             </CardDescription>
           </CardHeader>
         </Card>
 
-        <div className="grid grid-cols-1 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           <Card className="bg-white shadow-lg border border-indigo-100">
             <CardHeader>
-              <CardTitle className="text-indigo-800">
+              <CardTitle className="text-indigo-800 text-base sm:text-lg">
                 Today's Emotions
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="h-[400px]">
+              <div className="h-[250px] sm:h-[300px] md:h-[350px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart
                     cx="50%"
@@ -155,7 +145,11 @@ export function MoodDashboard() {
                     data={todayEmotions}
                   >
                     <PolarGrid stroke="#E0E7FF" />
-                    <PolarAngleAxis dataKey="emotion" stroke="#4F46E5" />
+                    <PolarAngleAxis
+                      dataKey="emotion"
+                      stroke="#4F46E5"
+                      tick={{ fontSize: 10 }}
+                    />
                     <PolarRadiusAxis
                       angle={30}
                       domain={[0, 10]}
@@ -183,15 +177,25 @@ export function MoodDashboard() {
 
           <Card className="bg-white shadow-lg border border-indigo-100">
             <CardHeader>
-              <CardTitle className="text-indigo-800">Daily Mood</CardTitle>
+              <CardTitle className="text-indigo-800 text-base sm:text-lg">
+                Daily Mood
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="h-[300px]">
+              <div className="h-[200px] sm:h-[250px] md:h-[300px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={dailyData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#E0E7FF" />
-                    <XAxis dataKey="date" stroke="#4F46E5" />
-                    <YAxis domain={[0, 10]} stroke="#4F46E5" />
+                    <XAxis
+                      dataKey="date"
+                      stroke="#4F46E5"
+                      tick={{ fontSize: 10 }}
+                    />
+                    <YAxis
+                      domain={[0, 10]}
+                      stroke="#4F46E5"
+                      tick={{ fontSize: 10 }}
+                    />
                     <Tooltip
                       contentStyle={{
                         backgroundColor: "#EEF2FF",
@@ -208,15 +212,25 @@ export function MoodDashboard() {
 
           <Card className="bg-white shadow-lg border border-indigo-100">
             <CardHeader>
-              <CardTitle className="text-indigo-800">Weekly Mood</CardTitle>
+              <CardTitle className="text-indigo-800 text-base sm:text-lg">
+                Weekly Mood
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="h-[300px]">
+              <div className="h-[200px] sm:h-[250px] md:h-[300px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={weeklyData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#E0E7FF" />
-                    <XAxis dataKey="week" stroke="#4F46E5" />
-                    <YAxis domain={[0, 10]} stroke="#4F46E5" />
+                    <XAxis
+                      dataKey="week"
+                      stroke="#4F46E5"
+                      tick={{ fontSize: 10 }}
+                    />
+                    <YAxis
+                      domain={[0, 10]}
+                      stroke="#4F46E5"
+                      tick={{ fontSize: 10 }}
+                    />
                     <Tooltip
                       contentStyle={{
                         backgroundColor: "#EEF2FF",
@@ -238,15 +252,25 @@ export function MoodDashboard() {
 
           <Card className="bg-white shadow-lg border border-indigo-100">
             <CardHeader>
-              <CardTitle className="text-indigo-800">Monthly Mood</CardTitle>
+              <CardTitle className="text-indigo-800 text-base sm:text-lg">
+                Monthly Mood
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="h-[300px]">
+              <div className="h-[200px] sm:h-[250px] md:h-[300px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={monthlyData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#E0E7FF" />
-                    <XAxis dataKey="month" stroke="#4F46E5" />
-                    <YAxis domain={[0, 10]} stroke="#4F46E5" />
+                    <XAxis
+                      dataKey="month"
+                      stroke="#4F46E5"
+                      tick={{ fontSize: 10 }}
+                    />
+                    <YAxis
+                      domain={[0, 10]}
+                      stroke="#4F46E5"
+                      tick={{ fontSize: 10 }}
+                    />
                     <Tooltip
                       contentStyle={{
                         backgroundColor: "#EEF2FF",

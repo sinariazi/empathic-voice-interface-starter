@@ -21,7 +21,7 @@ export function LeftSidNav() {
   return (
     <div className="flex">
       <nav
-        className={`fixed left-0 top-0 z-40 h-full bg-white transition-all duration-300 ease-in-out shadow-lg ${
+        className={`fixed left-0 top-12 z-40 h-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
           isMenuExpanded ? "w-64" : "w-16"
         }`}
         aria-expanded={isMenuExpanded}
@@ -39,9 +39,8 @@ export function LeftSidNav() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/"
+                  href="/moodWhisper/"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  onClick={toggleMenu}
                   aria-label="Home"
                 >
                   <Home size={20} />
@@ -56,7 +55,7 @@ export function LeftSidNav() {
               </li>
               <li>
                 <Link
-                  href="/personalDashboard/moodTracker"
+                  href="/moodWhisper/personalDashboard/moodTracker"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
                   aria-label="Mood Tracker"
@@ -73,7 +72,7 @@ export function LeftSidNav() {
               </li>
               <li>
                 <Link
-                  href="/personalDashboard"
+                  href="/moodWhisper/personalDashboard"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
                   aria-label="Mood Dashboard"
@@ -90,10 +89,10 @@ export function LeftSidNav() {
               </li>
               <li>
                 <Link
-                  href="/talkingSession"
+                  href="/moodWhisper/talkingSession"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
-                  aria-label="Start a Therapy Session"
+                  aria-label=" Therapy Session"
                 >
                   <MessageCircle size={20} />
                   <span
@@ -107,7 +106,7 @@ export function LeftSidNav() {
               </li>
               <li>
                 <Link
-                  href="/callFunction"
+                  href="/moodWhisper/callFunction"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
                   aria-label="Start a Therapy Session"
@@ -122,21 +121,41 @@ export function LeftSidNav() {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/earlyUsersSignUp"
+                  className="flex items-center text-gray-700 hover:text-blue-600"
+                  onClick={toggleMenu}
+                  aria-label="waiting list"
+                >
+                  <BarChart size={20} />
+                  <span
+                    className={`ml-2 ${
+                      isMenuExpanded ? "inline-block" : "hidden"
+                    }`}
+                  >
+                    Early users waiting list
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Bottom Section - Login/Logout */}
           <div>
             <button
-              onClick={toggleLogin}
-              className="flex w-full items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+              onClick={() => {
+                toggleLogin();
+                toggleMenu();
+              }}
+              className="flex mb-20 w-full items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
               aria-label={isLoggedIn ? "Logout" : "Login"}
             >
               {isLoggedIn ? (
                 <>
                   <LogOut size={20} />
                   <span
-                    className={`ml-2 ${
+                    className={`ml-1 ${
                       isMenuExpanded ? "inline-block" : "hidden"
                     }`}
                   >
@@ -147,8 +166,8 @@ export function LeftSidNav() {
                 <>
                   <LogIn size={20} />
                   <span
-                    className={`ml-2 ${
-                      isMenuExpanded ? "inline-block" : "hidden"
+                    className={`ml-1  ${
+                      isMenuExpanded ? "inline-block " : "hidden"
                     }`}
                   >
                     Login
