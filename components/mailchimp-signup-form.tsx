@@ -130,8 +130,8 @@ export default function EarlyUserSignUp() {
           </h2>
           <p className="text-gray-400">
             Join the Mood Whisper waiting list. We will update you with the
-            latest news and you will get a free access to the app for the first
-            month. Also please
+            latest updates and you will get 20% discount for the first 3 months.
+            Also please
           </p>
           <p className="text-blue-800 ">
             {" "}
