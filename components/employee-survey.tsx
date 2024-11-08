@@ -130,6 +130,11 @@ export function EmployeeSurveyComponent() {
         categoryQuestions[Math.floor(Math.random() * categoryQuestions.length)],
     }));
     setQuestions(randomQuestions);
+    const defaultAnswers: { [key: number]: Answer } = {};
+    randomQuestions.forEach((question, index) => {
+      defaultAnswers[index] = { ...question, value: 0 };
+    });
+    setAnswers(defaultAnswers);
   }, []);
 
   const handleAnswer = (value: number) => {
@@ -275,7 +280,7 @@ export function EmployeeSurveyComponent() {
           min={0}
           max={5}
           step={1}
-          value={[answers[currentQuestionIndex]?.value || 0]}
+          value={[answers[currentQuestionIndex]?.value ?? 0]}
           onValueChange={(value) => handleAnswer(value[0])}
           className="mb-6"
         />

@@ -104,7 +104,7 @@ export function MoodDashboard() {
           </div>
         </Link>
         <Link
-          href="/personalDashboard/moodTracker"
+          href="/moodWhisper/personalDashboard/moodTracker"
           className="w-full sm:w-auto"
         >
           <Button
