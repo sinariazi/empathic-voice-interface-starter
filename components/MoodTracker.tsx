@@ -84,7 +84,7 @@ export function MoodTracker() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center p-4">
       <Card className="w-full max-w-2xl bg-white/80 backdrop-blur-sm shadow-xl overflow-hidden">
         <CardHeader className="space-y-4">
-          <Link href="/personalDashboard">
+          <Link href="/moodWhisper/personalDashboard">
             <Button
               onClick={() => console.log("Enter your current mood here")}
               className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm"

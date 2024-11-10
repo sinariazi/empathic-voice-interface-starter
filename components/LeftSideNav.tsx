@@ -72,6 +72,24 @@ export function LeftSidNav() {
               </li>
               <li>
                 <Link
+                  href="/moodWhisper/pricing"
+                  className="flex items-center text-gray-700 hover:text-blue-600"
+                  onClick={toggleMenu}
+                  aria-label="pricing"
+                >
+                  <BarChart size={20} />
+                  <span
+                    className={`ml-2 ${
+                      isMenuExpanded ? "inline-block" : "hidden"
+                    }`}
+                  >
+                    pricing
+                  </span>
+                </Link>
+              </li>
+
+              <li>
+                <Link
                   href="/moodWhisper/personalDashboard"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
