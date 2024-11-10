@@ -299,7 +299,7 @@ export default function CallFunction() {
                 {isVoiceMode ? "Voice Mode" : "Text Mode"}
               </span>
             </div>
-            <Link href="/personalDashboard/moodTracker">
+            <Link href="/moodWhisper/personalDashboard/moodTracker">
               <Button
                 variant="outline"
                 className="w-full sm:w-auto text-blue-600 border-blue-600 hover:bg-blue-50"

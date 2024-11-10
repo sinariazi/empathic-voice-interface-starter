@@ -72,6 +72,24 @@ export function LeftSidNav() {
               </li>
               <li>
                 <Link
+                  href="/moodWhisper/pricing"
+                  className="flex items-center text-gray-700 hover:text-blue-600"
+                  onClick={toggleMenu}
+                  aria-label="pricing"
+                >
+                  <BarChart size={20} />
+                  <span
+                    className={`ml-2 ${
+                      isMenuExpanded ? "inline-block" : "hidden"
+                    }`}
+                  >
+                    pricing
+                  </span>
+                </Link>
+              </li>
+
+              <li>
+                <Link
                   href="/moodWhisper/personalDashboard"
                   className="flex items-center text-gray-700 hover:text-blue-600"
                   onClick={toggleMenu}
@@ -83,7 +101,24 @@ export function LeftSidNav() {
                       isMenuExpanded ? "inline-block" : "hidden"
                     }`}
                   >
-                    My Mood Dashboard
+                    Dashboard
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/moodWhisper/survey"
+                  className="flex items-center text-gray-700 hover:text-blue-600"
+                  onClick={toggleMenu}
+                  aria-label="survey"
+                >
+                  <BarChart size={20} />
+                  <span
+                    className={`ml-2 ${
+                      isMenuExpanded ? "inline-block" : "hidden"
+                    }`}
+                  >
+                    Survey
                   </span>
                 </Link>
               </li>
