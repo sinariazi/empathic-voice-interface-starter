@@ -101,7 +101,7 @@ export function LeftSidNav() {
                       isMenuExpanded ? "inline-block" : "hidden"
                     }`}
                   >
-                    My Mood Dashboard
+                    Dashboard
                   </span>
                 </Link>
               </li>
