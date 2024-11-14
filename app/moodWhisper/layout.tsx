@@ -6,6 +6,7 @@ import { LeftSidNav } from "@/components/LeftSideNav";
 import { Nav } from "@/components/Nav";
 import { cn } from "@/utils";
 import "../moodWhisper/globals.css";
+import { FooterComponent } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Mood Whisper",
@@ -26,9 +27,16 @@ export default function RootLayout({
           "flex flex-col min-h-screen"
         )}
       >
-        <LeftSidNav />
         <Nav />
-        <div className="mt-12 ml-16"> {children}</div>
+        {/* Flex wrapper for LeftSideNav and main content */}
+        <div className="flex flex-1 w-full">
+          <LeftSidNav />
+          {/* Main content area that adjusts its width */}
+          <main className="flex-grow transition-all duration-300 p-4 ml-[4rem] md:ml-[5rem] lg:ml-[6rem]">
+            {children}
+          </main>
+        </div>
+        <FooterComponent />
       </body>
     </html>
   );
