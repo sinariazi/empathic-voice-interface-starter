@@ -77,21 +77,21 @@ export function FooterComponent() {
             <h3 className="text-lg font-semibold text-gray-800">Connect</h3>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61567013215814"
                 className="text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <Facebook size={24} />
                 <span className="sr-only">Facebook</span>
               </a>
               <a
-                href="https://Linkedin.com"
+                href="https://www.linkedin.com/company/mood-whisper"
                 className="text-gray-600 hover:text-blue-400 transition-colors"
               >
                 <Linkedin size={24} />
                 <span className="sr-only">Linkedin</span>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/moodwhisper_ai/"
                 className="text-gray-600 hover:text-pink-600 transition-colors"
               >
                 <Instagram size={24} />
