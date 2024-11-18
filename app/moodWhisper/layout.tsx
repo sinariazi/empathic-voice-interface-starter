@@ -36,7 +36,9 @@ export default function RootLayout({
             {children}
           </main>
         </div>
-        <FooterComponent />
+        <div className="ml-20 mt-20">
+          <FooterComponent />
+        </div>
       </body>
     </html>
   );

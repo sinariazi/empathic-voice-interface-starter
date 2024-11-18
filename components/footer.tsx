@@ -1,7 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Mail, Phone } from "lucide-react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Mail,
+  Phone,
+  Linkedin,
+} from "lucide-react";
 
 export function FooterComponent() {
   return (
@@ -47,13 +54,19 @@ export function FooterComponent() {
             <h3 className="text-lg font-semibold text-gray-800">Legal</h3>
             <nav className="flex flex-col space-y-2">
               <Link
-                href="/privacy-policy"
+                href="/moodWhisper/legal/privacyPolicy"
                 className="hover:text-blue-600 transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="/terms-of-service"
+                href="/moodWhisper/legal/cookies"
+                className="hover:text-blue-600 transition-colors"
+              >
+                Cookie Policy
+              </Link>
+              <Link
+                href="/moodWhisper/legal/termsOfService"
                 className="hover:text-blue-600 transition-colors"
               >
                 Terms of Service
@@ -71,11 +84,11 @@ export function FooterComponent() {
                 <span className="sr-only">Facebook</span>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://Linkedin.com"
                 className="text-gray-600 hover:text-blue-400 transition-colors"
               >
-                <Twitter size={24} />
-                <span className="sr-only">Twitter</span>
+                <Linkedin size={24} />
+                <span className="sr-only">Linkedin</span>
               </a>
               <a
                 href="https://instagram.com"
