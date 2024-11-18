@@ -57,7 +57,6 @@ export function LeftSidNav() {
                 <Link
                   href="/moodWhisper/personalDashboard/moodTracker"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  onClick={toggleMenu}
                   aria-label="Mood Tracker"
                 >
                   <BarChart size={20} />
@@ -74,7 +73,6 @@ export function LeftSidNav() {
                 <Link
                   href="/moodWhisper/pricing"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  onClick={toggleMenu}
                   aria-label="pricing"
                 >
                   <BarChart size={20} />
@@ -92,7 +90,6 @@ export function LeftSidNav() {
                 <Link
                   href="/moodWhisper/personalDashboard"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  onClick={toggleMenu}
                   aria-label="Mood Dashboard"
                 >
                   <BarChart size={20} />
@@ -109,7 +106,6 @@ export function LeftSidNav() {
                 <Link
                   href="/moodWhisper/survey"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  onClick={toggleMenu}
                   aria-label="survey"
                 >
                   <BarChart size={20} />
@@ -126,7 +122,6 @@ export function LeftSidNav() {
                 <Link
                   href="/moodWhisper/talkingSession"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  onClick={toggleMenu}
                   aria-label=" Therapy Session"
                 >
                   <MessageCircle size={20} />
@@ -143,7 +138,6 @@ export function LeftSidNav() {
                 <Link
                   href="/moodWhisper/callFunction"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  onClick={toggleMenu}
                   aria-label="Start a Therapy Session"
                 >
                   <MessageCircle size={20} />
@@ -160,7 +154,6 @@ export function LeftSidNav() {
                 <Link
                   href="/earlyUsersSignUp"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  onClick={toggleMenu}
                   aria-label="waiting list"
                 >
                   <BarChart size={20} />
@@ -181,7 +174,6 @@ export function LeftSidNav() {
             <button
               onClick={() => {
                 toggleLogin();
-                toggleMenu();
               }}
               className="flex mb-20 w-full items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
               aria-label={isLoggedIn ? "Logout" : "Login"}
