@@ -73,7 +73,7 @@ export function LeftSidNav() {
                 <Link
                   href="/moodWhisper/pricing"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  aria-label="pricing"
+                  aria-label="Pricing"
                 >
                   <BarChart size={20} />
                   <span
@@ -81,7 +81,7 @@ export function LeftSidNav() {
                       isMenuExpanded ? "inline-block" : "hidden"
                     }`}
                   >
-                    pricing
+                    Pricing
                   </span>
                 </Link>
               </li>
@@ -106,7 +106,7 @@ export function LeftSidNav() {
                 <Link
                   href="/moodWhisper/survey"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  aria-label="survey"
+                  aria-label="Survey"
                 >
                   <BarChart size={20} />
                   <span
@@ -122,7 +122,7 @@ export function LeftSidNav() {
                 <Link
                   href="/moodWhisper/talkingSession"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  aria-label=" Therapy Session"
+                  aria-label="Therapy Session"
                 >
                   <MessageCircle size={20} />
                   <span
@@ -138,7 +138,7 @@ export function LeftSidNav() {
                 <Link
                   href="/moodWhisper/callFunction"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  aria-label="Start a Therapy Session"
+                  aria-label="Start a Call Function"
                 >
                   <MessageCircle size={20} />
                   <span
@@ -146,7 +146,7 @@ export function LeftSidNav() {
                       isMenuExpanded ? "inline-block" : "hidden"
                     }`}
                   >
-                    New Call function
+                    New Call Function
                   </span>
                 </Link>
               </li>
@@ -154,7 +154,7 @@ export function LeftSidNav() {
                 <Link
                   href="/earlyUsersSignUp"
                   className="flex items-center text-gray-700 hover:text-blue-600"
-                  aria-label="waiting list"
+                  aria-label="Waiting List"
                 >
                   <BarChart size={20} />
                   <span
@@ -162,7 +162,7 @@ export function LeftSidNav() {
                       isMenuExpanded ? "inline-block" : "hidden"
                     }`}
                   >
-                    Early users waiting list
+                    Early Users Waiting List
                   </span>
                 </Link>
               </li>
@@ -172,34 +172,17 @@ export function LeftSidNav() {
           {/* Bottom Section - Login/Logout */}
           <div>
             <button
-              onClick={() => {
-                toggleLogin();
-              }}
-              className="flex mb-20 w-full items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+              onClick={toggleLogin}
+              className={`mb-20 w-full flex items-center ${
+                isMenuExpanded ? "justify-center" : "justify-center"
+              } rounded-md bg-blue-600 py-2 text-white hover:bg-blue-700`}
               aria-label={isLoggedIn ? "Logout" : "Login"}
             >
-              {isLoggedIn ? (
-                <>
-                  <LogOut size={20} />
-                  <span
-                    className={`ml-1 ${
-                      isMenuExpanded ? "inline-block" : "hidden"
-                    }`}
-                  >
-                    Logout
-                  </span>
-                </>
-              ) : (
-                <>
-                  <LogIn size={20} />
-                  <span
-                    className={`ml-1  ${
-                      isMenuExpanded ? "inline-block " : "hidden"
-                    }`}
-                  >
-                    Login
-                  </span>
-                </>
+              <div className="flex items-center justify-center">
+                {isLoggedIn ? <LogOut size={20} /> : <LogIn size={20} />}
+              </div>
+              {isMenuExpanded && (
+                <span className="ml-2">{isLoggedIn ? "Logout" : "Login"}</span>
               )}
             </button>
             {isLoggedIn && (
