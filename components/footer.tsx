@@ -19,7 +19,7 @@ export function FooterComponent() {
             <h3 className="text-lg font-semibold text-gray-800">Quick Links</h3>
             <nav className="flex flex-col space-y-2">
               <Link
-                href="/about"
+                href="/moodWhisper/aboutUs"
                 className="hover:text-blue-600 transition-colors"
               >
                 About
@@ -31,13 +31,13 @@ export function FooterComponent() {
                 Features
               </Link>
               <Link
-                href="/blog"
+                href="/blog/1"
                 className="hover:text-blue-600 transition-colors"
               >
                 Blog
               </Link>
               <Link
-                href="/pricing"
+                href="/moodWhisper/pricing"
                 className="hover:text-blue-600 transition-colors"
               >
                 Pricing
@@ -113,10 +113,10 @@ export function FooterComponent() {
             <div className="flex items-center space-x-2">
               <Phone size={18} />
               <a
-                href="tel:+1234567890"
+                href="tel:+436607298774"
                 className="hover:text-blue-600 transition-colors"
               >
-                +1 (234) 567-890
+                +43 (660) 729-8774
               </a>
             </div>
           </div>
