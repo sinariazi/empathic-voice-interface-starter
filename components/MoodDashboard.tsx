@@ -30,16 +30,16 @@ import {
 
 // Mock data for the mood charts
 const todayEmotions = [
-  { emotion: "Happiness", value: 8 },
-  { emotion: "Excitement", value: 7 },
-  { emotion: "Contentment", value: 6 },
-  { emotion: "Gratitude", value: 9 },
-  { emotion: "Love", value: 8 },
-  { emotion: "Anxiety", value: 4 },
-  { emotion: "Stress", value: 5 },
-  { emotion: "Sadness", value: 3 },
-  { emotion: "Anger", value: 2 },
-  { emotion: "Fear", value: 3 },
+  { emotion: "Joy ", value: 8 },
+  { emotion: "Satisfaction ", value: 7 },
+  { emotion: "Curiosity ", value: 6 },
+  { emotion: "Respect ", value: 9 },
+  { emotion: "Gratitude ", value: 8 },
+  { emotion: "Confidence  ", value: 4 },
+  { emotion: "Interest ", value: 5 },
+  { emotion: "Hope  ", value: 3 },
+  { emotion: "Comfort ", value: 2 },
+  { emotion: "Excitement ", value: 3 },
 ];
 
 const dailyData = [
