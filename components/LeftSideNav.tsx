@@ -8,6 +8,9 @@ import {
   LogIn,
   User,
   Home,
+  FileSliders,
+  PanelLeftOpen,
+  PanelLeftClose,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -34,7 +37,11 @@ export function LeftSidNav() {
               className="mb-8 text-gray-500 hover:text-gray-900"
               aria-label="Toggle Menu"
             >
-              <Menu size={24} />
+              {isMenuExpanded ? (
+                <PanelLeftClose size={24} />
+              ) : (
+                <PanelLeftOpen size={24} />
+              )}
             </button>
             <ul className="space-y-4">
               <li>
@@ -163,6 +170,22 @@ export function LeftSidNav() {
                     }`}
                   >
                     Early Users Waiting List
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/admin"
+                  className="flex items-center text-gray-700 hover:text-blue-600"
+                  aria-label="Waiting List"
+                >
+                  <FileSliders size={20} />
+                  <span
+                    className={`ml-2 ${
+                      isMenuExpanded ? "inline-block" : "hidden"
+                    }`}
+                  >
+                    Admin Panel
                   </span>
                 </Link>
               </li>
