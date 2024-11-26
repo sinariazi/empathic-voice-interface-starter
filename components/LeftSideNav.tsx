@@ -13,6 +13,7 @@ import {
   PanelLeftClose,
 } from "lucide-react";
 import { useState } from "react";
+import LogoutForm from "./logout-form";
 
 export function LeftSidNav() {
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
@@ -191,6 +192,8 @@ export function LeftSidNav() {
               </li>
             </ul>
           </div>
+
+          <LogoutForm />
 
           {/* Bottom Section - Login/Logout */}
           <div>
