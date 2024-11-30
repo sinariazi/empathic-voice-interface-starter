@@ -7,6 +7,7 @@ import { Nav } from "@/components/Nav";
 import { cn } from "@/utils";
 import "../moodWhisper/globals.css";
 import { FooterComponent } from "@/components/footer";
+import ConfigureAmplifyClientSide from "../amplify-cognito-config";
 
 export const metadata: Metadata = {
   title: "Mood Whisper",
@@ -27,6 +28,7 @@ export default function RootLayout({
           "flex flex-col min-h-screen"
         )}
       >
+           <ConfigureAmplifyClientSide />
         <Nav />
         {/* Flex wrapper for LeftSideNav and main content */}
         <div className="flex flex-1 w-full">
