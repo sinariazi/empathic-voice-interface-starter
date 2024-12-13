@@ -6,8 +6,7 @@ export async function middleware(request: NextRequest) {
   const user = await authenticatedUser({ request, response });
 
   const isOnDashboard = request.nextUrl.pathname.startsWith("/moodWhisper");
-  const isOnAdminArea =
-    request.nextUrl.pathname.startsWith("/dashboard/admins");
+  const isOnAdminArea = request.nextUrl.pathname.startsWith("/admin");
 
   if (isOnDashboard) {
     if (!user)
